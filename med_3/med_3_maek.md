@@ -23,5 +23,5 @@ A decoded string in understandable format
 - append the character and return the decoded string
 
 ## What has been learnt?
-- Character indexing
-- Encoding and decoding methods
+- Character indexing.
+- Encoding and decoding methods.
