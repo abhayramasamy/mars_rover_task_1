@@ -65,6 +65,8 @@ A list that has been applied with a filter.
 - Double-pass filtering removes more noise while preserving important signal features
 - Better handling of sudden peaks or drops (outliers)
 - More robust smoothing suitable for real-world noisy data
+### *Which was the best actually?*
+Overall Hybrid filtering might be slow but was the best in filtering overall, smoothness and reliability of the values are ensured
 
 ## Key Learning Takeaways:
 - One can learn about different simple filtering methods with simple cleaning methods.
