@@ -6,6 +6,8 @@ This recruitment task is done by Abhay Ramasamy as a part fo the entry submissio
 
 please note that:
 
+## This assignment is not under GNU PUBLIC LICENSE V3.0 AS OF NOW BUT UNDER A NEW LICENSE:
+
 
 **ACADEMIC ASSIGNMENT RESTRICTED LICENSE**
 *Version 1.0 — Temporary Academic Use Only*
