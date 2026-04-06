@@ -22,7 +22,7 @@ This License Agreement ("Agreement") governs access to and use of the software, 
 
 **ARTICLE I — GRANT OF RIGHTS**
 
-Subject to the terms of this Agreement, the copyright holder grants the Viewer a limited, non-exclusive, non-transferable, revocable right to view and read the Work solely for the purpose of academic assessment, evaluation, or grading by authorised personnel of [Your Institution Name].
+Subject to the terms of this Agreement, the copyright holder grants the Viewer a limited, non-exclusive, non-transferable, revocable right to view and read the Work solely for the purpose of academic assessment, evaluation, or grading by authorised personnel of [IIITDM K].
 
 Notwithstanding the restrictions set forth in Article II, authorised members of the **MaRs Rover Recruitment Club** ("Authorised Assessors"), acting solely in their official capacity as recruiters or evaluators, are hereby granted an elevated, non-exclusive, non-transferable right to:
 
