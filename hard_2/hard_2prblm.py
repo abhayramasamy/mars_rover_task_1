@@ -67,5 +67,5 @@ def find_distance(perceived_width):
 
 
 if __name__ == "__main__":
-    image_path = 'arrow_image.jpg'  # Replace with your image path
-    detect_arrow(image_path)  # Replace with your image path
+    image_path = 'arrow_image.jpg' 
+    detect_arrow(image_path)  
