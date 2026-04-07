@@ -34,8 +34,10 @@ def cost_fun(i1, i2, m1, m2, o1, o2):
 #intially posiiton: 0, 0, 0 
 configs = [(0, 0, 0)]
 
+print("\n Greedy stratergy: not optimal: ")
 #Greedy solution just proioritzes the current cost difference and doesnt care about the overall cost scenario
 # this might be temporarily good but may return a bad solution overall
+tc = 0
 for target in targets:
     best_config = None
     prev_config = configs[-1]     #last configuration 
@@ -52,14 +54,17 @@ for target in targets:
                             min_cost = cost 
                             best_config = (i1, m1, o1)
     print(f"Best config for target {target}: {best_config} with cost {min_cost}")
+    tc+=min_cost
     configs.append(best_config)
-print("Optimal configurations for targets:", configs[1:])
+#print("Optimal configurations for targets:", configs[1:])
+print(f"The total greedy min cost: {tc}")
 
 
 #new stratergy based on dp 
 #This is not a greedy solution but rather looks onto the overall perspective when it comes to calculating the 
 #target cost at the end
 #this is more effecient and delivers the best solution directly
+print("\n A optimal non greedy strategy: ")
 configs = [(0, 0, 0)]
 dp = {(0, 0, 0): 0}  #initial dictionary
 for target in targets:
