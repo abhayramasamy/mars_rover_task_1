@@ -7,6 +7,7 @@ we have been allowed to experiment with a hybrid filter.
 #open a file named log.txt to obtain the list
 with open('log.txt', 'r') as f:
     arr_test = f.readline().strip().split()
+
 k = int(input("Enter the value of window sizes: "))  #recieve list and rolling window size
 
 def muchiko_filter(arr, k): #implementation of munchikp filter
