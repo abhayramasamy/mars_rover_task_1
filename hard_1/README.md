@@ -129,12 +129,17 @@ Grid indices: (row, col)
 3. Implement BFS first for baseline
 4. Add A* with Manhattan heuristic
 5. Test with various obstacle configurations
-6. Add path-to-moves conversion
+6. Add path-to-moves conversion.
+   
+## library used:
+1. Numpy
+2. collections
+3. heapq
 
 ## <span style="color: #FF1493; font-family: Arial, sans-serif;">Resources Used</span>
 
 - Python documentation for heapq, deque, numpy
-- Pathfinding algorithm references (CLRS textbook)
-- Stack Overflow for implementation details
+- Geeks for geeks
+- Stack Overflow
 - Mars rover simulation concepts from robotics literature</content>
-<parameter name="filePath">c:\Users\ABHAY RAMASAMY\Desktop\IITMBSDS\mars_rover\README.md
+

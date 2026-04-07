@@ -38,6 +38,8 @@ This task involves detecting an arrow in an image using computer vision techniqu
 
 ## Methods Used (opencv and distance_estimation)
 
+**Note, some parts of the following approach are already included in the partially complete file**
+
 1. Image Preprocessing
 
 * Convert image to grayscale
