@@ -28,7 +28,7 @@ def Rz(g):
 #Obtaining user input for rover coordinates, orientation angles, and camera frame coordinates
 x , y, z = map(float, input("Enter rover coordinates (x y z): ").split())                                  #rover position in world frame
 a, b, g = map(float, input("Enter rover orientation angles (a b g in degrees): ").split())                 #roll, pitch, yaw angles in degrees
-x_cam ,y_cam, z_cam = map(float, input("Enter world frame coordinates in camera frame (x y z): ").split()) #point coordinates in camera frame
+x_cam ,y_cam, z_cam = map(float, input("Enter point coordinates in camera frame (x y z): ").split()) #point coordinates in camera frame
 
 R = Rz(g) @ Ry(b) @ Rx(a)    #Combined rotation matrix from roll, pitch, and yaw
 camera_coords = np.array([x_cam, y_cam, z_cam])
