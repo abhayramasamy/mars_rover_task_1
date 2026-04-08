@@ -36,7 +36,8 @@ $$\text{Camera Frame} \xrightarrow{T_{\text{rover}}^{\text{cam}}} \text{Rover Fr
 
 This is a **forward kinematics** problem — configuration is known, find where the object ends up in world frame. Not inverse kinematics, which solves backwards from a desired world position.
 
-### Homogeneous Transformation Matrix (HTM)
+**Some linear algebra related stuff:**
+### Transformation Matrix
 
 Rigid body motion is affine, not linear. To express rotation and translation as a single matrix multiplication, coordinates are embedded into 4D homogeneous form by appending 1:
 
@@ -82,40 +83,6 @@ $$\mathbf{p}_{\text{rover}} = R_{\text{mount}} \cdot \mathbf{p}_{\text{cam}} + \
 
 $$\boxed{\mathbf{p}_{\text{world}} = R_{\text{rover}} \cdot \mathbf{p}_{\text{rover}} + \mathbf{t}_{\text{rover}}}$$
 
-### Inverse Rotation
-
-Since rotation matrices are orthogonal ($R^T R = I$):
-
-$$R^{-1} = R^T$$
-
-Inverse transform (world to camera direction):
-
-$$\mathbf{p}_{\text{cam}} = R_{\text{mount}}^T \cdot (R_{\text{rover}}^T \cdot (\mathbf{p}_{\text{world}} - \mathbf{t}_{\text{rover}}) - \mathbf{t}_{\text{mount}})$$
-
----
-
-## Algorithm
-
-INPUT: p_cam, t_rover, angles (α, β, γ)
-
-- Convert angles to radians
-- Build rotation matrices Rx, Ry, Rz
-- R_rover = Rz @ Ry @ Rx
-- T_world_rover = <br/>
-| R_rover  t_rover |<br/>
-| 0  0  0     1    |
-- T_rover_cam  = <br/>
-| R_mount  t_mount | <br/>
-| 0  0  0    1     |
-- p_cam_h   = [x_cam, y_cam, z_cam, 1]
-- p_world_h = T_world_rover @ T_rover_cam @ p_cam_h
-- p_world   = p_world_h[:3]
-
-OUTPUT: p_world
-Complexity: O(1) — fixed size 4x4 matrix operations.
-
----
-
 ## Sketches
 
 ![Frame Chain Diagram](sketch_frame_chain.jpg)
@@ -128,17 +95,15 @@ Complexity: O(1) — fixed size 4x4 matrix operations.
 *Here are a few things that I learnt from this project, listed out:*
 
 ### Forward Kinematics
-- Forward kinematics solves **known configuration → find end position**,
-  as opposed to inverse kinematics which solves backwards from a desired position
+- Forward kinematics solves **known configuration to find end position**,
 
-### Rigid Body Transforms
-- Rotation + translation together form an **affine transform**, not linear
+### Linear algebra in transformaton:
 - Homogeneous coordinates embed affine transforms into linear matrix multiplication
   by appending 1 to the coordinate vector
 - Forward direction: $R \cdot p + t$
 - Inverse direction: $R^T \cdot (p - t)$
 
-### Rotation Matrices
+### Learnt about Rotation Matrices
 - Rotation matrices are **orthogonal** — columns are unit vectors, mutually perpendicular
 - This gives the property $R^T = R^{-1}$, making inversion just a transpose
 - Extrinsic (fixed axis) and intrinsic (Euler) rotations produce different results
