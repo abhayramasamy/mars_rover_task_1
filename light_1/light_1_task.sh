@@ -17,7 +17,7 @@ touch log1.txt log2.txt log3.txt
 # 3) Rename log1.txt to mission_log.txt
 mv log1.txt mission_log.txt
 
-# 4) Find all files with .txt extension in current directory
+# 4) Find all files with .txt extension in current directory, use find [path] [type] [name]
 find . -name "*.txt"
 
 # 5) Display contents of mission_log.txt without opening an editor
@@ -36,4 +36,4 @@ date
 top -b -n 1 | head -20
 
 # 10) Schedule a shutdown in 10 minutes
-#sudo shutdown -h +10
+sudo shutdown -h +10
