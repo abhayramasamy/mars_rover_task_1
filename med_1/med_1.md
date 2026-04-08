@@ -84,10 +84,9 @@ $$\mathbf{p}_{\text{rover}} = R_{\text{mount}} \cdot \mathbf{p}_{\text{cam}} + \
 $$\boxed{\mathbf{p}_{\text{world}} = R_{\text{rover}} \cdot \mathbf{p}_{\text{rover}} + \mathbf{t}_{\text{rover}}}$$
 
 ## Sketches
+**Skectch showcasing how the transformation works:**
 
-![Frame Chain Diagram](sketch_frame_chain.jpg)
-
-![Vector Decomposition](sketch_vectors.jpg)
+![Vector Decomposition](visulas.png)
 
 ---
 ## Key Takeaways
