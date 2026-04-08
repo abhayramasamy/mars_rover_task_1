@@ -37,6 +37,7 @@ This task involves detecting an arrow in an image using computer vision techniqu
 ---
 
 ## Methods Used (opencv and distance_estimation)
+*After studing the code:*
 
 **Note, some parts of the following approach are already included in the partially complete file**
 
@@ -118,21 +119,7 @@ Distance = (f × Real Width) / Perceived Width
 
 ---
 
-## Approach
 
-1. Load image using OpenCV.
-2. Convert to grayscale and apply Gaussian blur.
-3. Perform Canny edge detection.
-4. Extract contours from the edge image.
-5. Approximate each contour to a polygon.
-6. Filter contours with approximately 7 vertices (arrow-like shape).
-7. Draw contour and compute bounding box.
-8. Measure perceived width in pixels.
-9. Compute focal length using FOV and resolution.
-10. Estimate distance using pinhole camera equation.
-11. Display results on the image.
-
----
 
 ## Learning Experience
 
